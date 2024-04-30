@@ -1,0 +1,53 @@
+body{
+  background-color: #3e3e3e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* Parent element which describes the fixed width and height so that image set is within the parent component position relative because parent container should have relative*/
+.slide-container{
+  width: 50vw;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 3px 6px rgb(114, 107, 107) ;
+}
+
+/* container that holds the image set , so display flex arranges the images in a row and then because of parent element having overflow as hidden the images towards right are hidden*/
+.slides{   
+  position: absolute; /* we shld have absolute only then in JS we can assign left values for the container to slide*/
+  top: 20%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  transition: 1s ease-in-out all;
+}
+
+.slide{
+  min-width: 100%;
+  height: 500px;
+}
+
+/* button styles */
+.button-container{
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 9999;
+  transition: all ease 1s;
+}
+
+.control{
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+  transition: ease .3s;
+  cursor: pointer;
+}
